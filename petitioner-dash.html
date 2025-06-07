@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petitioner Dashboard</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        h1
+        {
+            text-align: left;
+            margin-left: 50px;
+            margin-top: 100px;
+        }
+        h2
+        {
+            margin-top: 10px;
+            text-align: left;
+        }
+        p 
+        {
+            text-align: left;
+            margin-left: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <button id="log-out-btn" class="log-out-btn">Log Out</button>
+    <button id="profile-btn" class="profile-btn">Profile</button>
+    <h1>Petitioner Dashboard</h1>
+    <p>Welcome to your dashboard. Here you can manage your petitions and view updates.</p>
+    <div class="tabs"> 
+        <!-- Show users different clickable tabs -->
+        <button class="tab active" data-tab="create">Create Petitions</button>
+        <button class="tab" data-tab="view">View Petitions</button>
+    </div>
+    <div id="create" class="tab-content active">
+        <!-- Create a new petition form -->
+        <h2>Create a New Petition</h2>
+        <div class="petition-form">
+            <label for="petition-title">Petition Title:</label>
+            <input type="text" id="petition-title" placeholder="Enter the title of your petition">
+            <label for="petition-content">Petition Content:</label>
+            <textarea id="petition-content" rows="10" placeholder="Enter the content of your petition"></textarea>
+            <button id="create-petition-btn">Create Petition</button>
+        </div>
+    </div>
+    <!-- View petitions tab -->
+    <div id="view" class="tab-content">
+        <h2>View Petitions</h2>
+        <div class="petition-filter-buttons">
+            <button id="all-petitions-btn">All Petitions</button>
+            <button id="my-petitions-btn">My Petitions</button>
+        </div>
+        <h3 id="petition-table-title" style="display: none;"></h3> <!-- Title initially hidden -->
+        <table id="petition-table" class="petition-table">
+            <thead>
+                <tr>
+                    <th>Petition Title</th>
+                    <th>Details</th>
+                    <th>Status (Open/Closed)</th>
+                    <th>Response</th>
+                    <th>Signatures</th>
+                    <th id="action-header">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script type="module" src="js/firebase-setup.js"></script>
+    <script type="module" src="js/petitioner-dash.js"></script>
+</body>
+</html>

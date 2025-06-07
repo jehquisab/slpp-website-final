@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Committee Dashboard</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        h1
+        {
+            text-align: left;
+            margin-left: 50px;
+            margin-top: 100px;
+        }
+        h2
+        {
+            margin-top: 10px;
+            margin-left: 10px;
+            text-align: left;
+        }
+        p 
+        {
+            text-align: left;
+            margin-left: 50px;
+        }
+        label 
+        {
+            margin-top: 10px;
+            margin-left: 10px;
+            display: block;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <!-- adding log out button -->
+    <button id="log-out-btn" class="log-out-btn">Log Out</button>
+    <h1>Petitions Committee Dashboard</h1>
+    <p>Welcome to the Committee dashboard, where you can view petition details and provide responses as the Petitions Committee Officer</p>
+    <!-- Display table with petition details -->
+    <div class="petition-box">
+        <h2>View Petitions</h2>
+        <h3 id="petition-table-title"></h3>
+        <table id="petition-table" class="petition-table">
+            <thead>
+                <tr>
+                    <th>Petition Title</th>
+                    <th>Details</th>
+                    <th>Status (Open/Closed)</th>
+                    <th>Response</th>
+                    <th>Total Signatures</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Set signature threshold -->
+    <div class="petition-box">
+        <h2>Set Signature Threshold</h2>
+        <label for="signature-threshold">Signature Threshold:</label>
+        <input type="number" id="signature-threshold" placeholder="Set number of signatures required">
+        <button id="set-threshold-btn">Set Threshold</button>
+    </div>
+    <!-- Response popup content -->
+    <div id="response-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="close-popup">&times;</span>
+            <h2>Provide Response</h2>
+            <textarea id="response-text" rows="5" placeholder="Enter your response here"></textarea>
+            <button id="submit-response-btn">Submit Response</button>
+        </div>
+    </div>
+    <script type="module" src="js/firebase-setup.js"></script>
+    <script type="module" src="js/committee-dash.js"></script>
+
+</body>
+</html>

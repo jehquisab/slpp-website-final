@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLPP</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="align">
+    <h1>Welcome to the Shangri-La Petition Platform</h1>
+    <p>The Shangri-La Petition Platform (SLPP) was designed to give Shangri-La citizens a voice.</p>
+    <p><strong>Please select your account type to proceed:</strong></p>
+    <div id="button-container">
+        <button id="petitioner-btn">Petitioner</button>
+        <button id="committee-btn">Committee</button>
+    </div>
+    
+    <!-- This is the popup that will appear when the user clicks on the "Register" button -->
+    <div id="register-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close-btn" id="close-popup">&times;</span>
+            <h2 id="popup-title">Register</h2>
+            <div id="register-fields">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" placeholder="Please enter your full name">
+                <label for="register-email">Email (Login ID):</label>
+                <input type="email" id="register-email" placeholder="Please enter your email">
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" placeholder="Create a password">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob">
+                <label for="biometric-id">Biometric ID (BioID):</label>
+                <button id="start-scanner">Start Scanner</button>
+                <input type="text" id="biometric-id" placeholder="Please enter your Biometric ID (10-digit code)">
+                <div id="my-qr-reader"></div>
+                
+                <button id="sign-up-btn">Sign Up</button>
+                <p>Already have an account? <a href="#" id="switch-to-login">Login here</a></p>
+            </div>
+
+            <!-- This is the login form that will be displayed when the user clicks on the "Login" button -->
+            <div id="login-fields" style="display: none;">
+                <input type="email" id="email" placeholder="Email (Login ID)">
+                <input type="password" id="password" placeholder="Password">
+                <button id="sign-in-btn">Sign In</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/firebase-setup.js"></script>
+    <script type="module" src="js/login.js"></script>
+    <script src="https://unpkg.com/html5-qrcode"></script> <!--QR scanner library -->
+    <script src="js/scan.js"></script> <!--QR scanner script -->
+</body>
+</html>

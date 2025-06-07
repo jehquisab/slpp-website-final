@@ -1,0 +1,310 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#user-prof-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    margin: 100px auto 0 auto; 
+    padding: 20px;  
+}
+
+#user-prof-box {
+    background-color: white;
+    border: 2px solid #ced4da; 
+    border-radius: 8px; 
+    padding: 20px;
+    width: 100%;
+    max-width: 500px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#user-prof-box h1 {
+    color: #343a40;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: left;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px; 
+}
+
+#user-details {
+    font-size: 1em;
+    color: #343a40;
+    line-height: 1.5;
+}
+
+#user-details p {
+    margin: 5px 0; 
+}
+
+h1 {
+    color: #343a40;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+input {
+    margin: 5px 0 15px;
+    padding: 10px;
+    width: 96%;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button {
+    width: auto;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+#button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.popup {
+   position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    text-align: left;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.log-out-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    width: auto;
+}
+
+.profile-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    width: auto;
+}
+
+.home-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    width: auto;
+}
+
+.tabs {
+    display: flex;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-bottom: 2px solid #ced4da;
+    width: 93%;
+}
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px 4px 0 0;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+.tab:hover {
+    background-color: #0056b3;
+}
+.tab.active {
+    background-color: #0056b3;
+}
+.tab-content {
+    display: none;
+    width: 90%; 
+    margin-left: 50px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #ced4da;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.tab-content.active {
+    display: block;
+}
+.petition-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+.petition-form input, .petition-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+.petition-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+.petition-form button:hover {
+    background-color: #0056b3;
+}
+/* qr css */
+/* .container {
+    width: 100%;
+    max-width: 500px;
+    margin: 5px;
+}
+
+.container h1 {
+    color: #ffffff;
+}
+
+.section {
+    background-color: #ffffff;
+    padding: 50px 30px;
+    border: 1.5px solid #b2b2b2;
+    border-radius: 0.25em;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+} */
+.petition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    display: none; /* Hide table initially */
+}
+.petition-table th, .petition-table td {
+    border: 1px solid #ced4da;
+    padding: 10px;
+    text-align: left;
+}
+.petition-table th {
+    background-color: #f2f2f2;
+    color: #343a40;
+}
+.petition-box {
+    background-color: white;
+    border: 2px solid #ced4da;
+    border-radius: 8px;
+    padding: 20px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#response-text {
+    margin-bottom: 10px;
+}
+#submit-response-btn {
+    align-self: flex-end;
+}
+
+#my-qr-reader {
+    padding: 20px !important;
+    border: 1.5px solid #b2b2b2 !important;
+    border-radius: 8px;
+}
+
+#my-qr-reader img[alt="Info icon"] {
+    display: none;
+}
+
+#my-qr-reader img[alt="Camera based scan"] {
+    width: 100px !important;
+    height: 100px !important;
+}
+
+#html5-qrcode-anchor-scan-type-change {
+    text-decoration: none !important;
+    color: #1d9bf0;
+}
+
+video {
+    width: 100% !important;
+    border: 1px solid #b2b2b2 !important;
+    border-radius: 0.25em;
+}
+#start-scanner {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#start-scanner:hover {
+    background-color: #0056b3;
+}

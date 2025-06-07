@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+ </head>
+<body>
+    <button id="log-out-btn" class="log-out-btn">Log Out</button>
+    <button id="home-btn" class="home-btn">Home</button>
+    <!-- Displays a box that holds the details of the logged in user -->
+    <div id="user-prof-container">
+        <div id="user-prof-box">
+            <h1>User Profile</h1>
+            <div id="user-details"> 
+                <p><strong>Full Name:</strong> <span id="full-name"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>Date of Birth:</strong> <span id="dob"></span></p>
+                <p><strong>Biometric ID:</strong> <span id="biometric-id"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/firebase-setup.js"></script>
+    <script type="module" src="js/petitioner-prof.js"></script>
+</body>
+</html>
