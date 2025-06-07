@@ -6,14 +6,7 @@ import { getFirestore, collection, addDoc, setDoc, getDoc, doc, getDocs, query, 
 
 //Firebase configuration
 const firebaseConfig = {
-  apiKey: "place your own api key here",
-  authDomain: "slpp-database.firebaseapp.com",
-  databaseURL: "https://slpp-database-default-rtdb.firebaseio.com",
-  projectId: "slpp-database",
-  storageBucket: "slpp-database.firebasestorage.app",
-  messagingSenderId: "44861661533",
-  appId: "1:44861661533:web:c52b611ba504abd5d608b4",
-  measurementId: "G-RMWDL3J4W9"
+  "replace with your own"
 };
 
 // Initialize Firebase
